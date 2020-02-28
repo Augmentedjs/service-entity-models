@@ -34,7 +34,7 @@ class Entity extends AbstractModel {
   */
 
   /**
-  * Initialize the model with needed wireing
+  * Initialize the model with needed wiring
   * @param {object} options Any options to pass
   */
   initialize(options) {

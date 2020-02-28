@@ -3,7 +3,7 @@ const http = require("http");
 const https = require("https");
 
 /**
- * Resource class to handle REST = require(Node</br/>
+ * Resource class to handle REST <br/>
  * <em>Note: URI property is required</em>
  * @param {attributes} attributes Any attributes to prefill the model
  * @param {object} options Any options to pass
@@ -71,10 +71,9 @@ class Resource extends AbstractModel {
       }
 
       try {
-        let j = {}, q, u = (typeof this.uri === "function") ? this.uri() : this.uri;
+        const u = (typeof this.uri === "function") ? this.uri() : this.uri;
         if (method === "create") {
-          j = that.attributes;
-          let options = {
+          const options = {
             path: u,
             method: "POST",
             headers: {
@@ -83,7 +82,7 @@ class Resource extends AbstractModel {
           };
           const h = (this.secure) ? https : http;
 
-          let req = h.request(options, (res) => {
+          const req = h.request(options, (res) => {
             //logger.debug("Status: " + res.statusCode);
             //logger.debug("Headers: " + JSON.stringify(res.headers));
             res.setEncoding("utf8");
@@ -108,8 +107,7 @@ class Resource extends AbstractModel {
           req.end();
 
         } else if (method === "update") {
-          j = that.attributes;
-          let options = {
+          const options = {
             path: u,
             method: "PUT",
             headers: {
@@ -119,7 +117,7 @@ class Resource extends AbstractModel {
 
           const h = (this.secure) ? https : http;
 
-          let req = h.request(options, (res) => {
+          const req = h.request(options, (res) => {
             //logger.debug("Status: " + res.statusCode);
             //logger.debug("Headers: " + JSON.stringify(res.headers));
             res.setEncoding("utf8");
@@ -144,14 +142,14 @@ class Resource extends AbstractModel {
           req.end();
 
         } else if (method === "delete") {
-          let options = {
+          const options = {
             path: u,
             method: "DELETE"
           };
 
           const h = (this.secure) ? https : http;
 
-          let req = h.request(options, (res) => {
+          const req = h.request(options, (res) => {
             //logger.debug("Status: " + res.statusCode);
             res.setEncoding("utf8");
             res.once("end", () => {
@@ -217,7 +215,7 @@ class Resource extends AbstractModel {
           });
         }
       } catch(e) {
-        //logger.error("Got exception: " + e);
+        console.error(e);
         if (error) {
           error(500, e);
         }

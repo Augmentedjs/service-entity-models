@@ -437,7 +437,6 @@ window.lunrData = {
           "note",
           "properti",
           "requir",
-          "require(node&lt;/br/&gt",
           "resourc",
           "rest",
           "uri"
@@ -910,7 +909,7 @@ window.lunrData = {
                   },
                   "Resource.html": {
                     "ref": "Resource.html",
-                    "tf": 5.555555555555555
+                    "tf": 6.25
                   }
                 }
               }
@@ -1008,63 +1007,7 @@ window.lunrData = {
                       },
                       "Resource.html": {
                         "ref": "Resource.html",
-                        "tf": 5.555555555555555
-                      }
-                    },
-                    "e": {
-                      "docs": {},
-                      "(": {
-                        "docs": {},
-                        "n": {
-                          "docs": {},
-                          "o": {
-                            "docs": {},
-                            "d": {
-                              "docs": {},
-                              "e": {
-                                "docs": {},
-                                "&": {
-                                  "docs": {},
-                                  "l": {
-                                    "docs": {},
-                                    "t": {
-                                      "docs": {},
-                                      ";": {
-                                        "docs": {},
-                                        "/": {
-                                          "docs": {},
-                                          "b": {
-                                            "docs": {},
-                                            "r": {
-                                              "docs": {},
-                                              "/": {
-                                                "docs": {},
-                                                "&": {
-                                                  "docs": {},
-                                                  "g": {
-                                                    "docs": {},
-                                                    "t": {
-                                                      "docs": {
-                                                        "Resource.html": {
-                                                          "ref": "Resource.html",
-                                                          "tf": 5.555555555555555
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
+                        "tf": 6.25
                       }
                     }
                   }
@@ -1089,7 +1032,7 @@ window.lunrData = {
                   },
                   "Resource.html": {
                     "ref": "Resource.html",
-                    "tf": 5.555555555555555
+                    "tf": 6.25
                   },
                   "Resource.html#sync": {
                     "ref": "Resource.html#sync",
@@ -1107,7 +1050,7 @@ window.lunrData = {
                       "docs": {
                         "Resource.html": {
                           "ref": "Resource.html",
-                          "tf": 1905.5555555555557
+                          "tf": 1906.25
                         },
                         "Resource.html#fetch": {
                           "ref": "Resource.html#fetch",
@@ -1749,7 +1692,7 @@ window.lunrData = {
                     },
                     "Resource.html": {
                       "ref": "Resource.html",
-                      "tf": 115.55555555555556
+                      "tf": 116.25
                     }
                   }
                 }
@@ -2912,7 +2855,7 @@ window.lunrData = {
                           },
                           "Resource.html": {
                             "ref": "Resource.html",
-                            "tf": 5.555555555555555
+                            "tf": 6.25
                           }
                         }
                       }
@@ -3640,7 +3583,7 @@ window.lunrData = {
                     },
                     "Resource.html": {
                       "ref": "Resource.html",
-                      "tf": 5.555555555555555
+                      "tf": 6.25
                     },
                     "Resource.html#sync": {
                       "ref": "Resource.html#sync",
@@ -3822,7 +3765,7 @@ window.lunrData = {
                 },
                 "Resource.html": {
                   "ref": "Resource.html",
-                  "tf": 5.555555555555555
+                  "tf": 6.25
                 }
               }
             },
@@ -3899,7 +3842,7 @@ window.lunrData = {
           }
         }
       },
-      "length": 330
+      "length": 329
     },
     "corpusTokens": [
       "api",
@@ -3996,7 +3939,6 @@ window.lunrData = {
       "readm",
       "refresh",
       "requir",
-      "require(node&lt;/br/&gt",
       "resourc",
       "resource#fetch",
       "resource#init",
@@ -4481,7 +4423,7 @@ window.lunrData = {
       "name": "initialize",
       "tags": "Entity#initialize initialize",
       "summary": "",
-      "description": "Initialize the model with needed wireing"
+      "description": "Initialize the model with needed wiring"
     },
     "Entity.html#init": {
       "id": "Entity.html#init",
@@ -4551,7 +4493,7 @@ window.lunrData = {
       "name": "Resource",
       "tags": "Resource",
       "summary": "",
-      "description": "Resource class to handle REST = require(Node&lt;/br/&gt; Note: URI property is required",
+      "description": "Resource class to handle REST Note: URI property is required",
       "body": ""
     },
     "Resource.html#initialize": {

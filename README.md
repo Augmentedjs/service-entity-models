@@ -455,7 +455,7 @@ The query to use for the query - defaults to "id" selection
 
 ### initialize
 
-Initialize the model with needed wireing
+Initialize the model with needed wiring
 
 #### Parameters
 
@@ -525,7 +525,7 @@ Destroy the entity
 
 **Extends AbstractModel**
 
-Resource class to handle REST = require(Node&lt;/br/>
+Resource class to handle REST <br/>
 <em>Note: URI property is required</em>
 
 ### Parameters

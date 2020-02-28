@@ -1,6 +1,6 @@
 {
   "name": "service-entity-models",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "The Augmented.js Next Service - Entity Models Module.",
   "main": "dist/service-entity-models.js",
   "scripts": {
