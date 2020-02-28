@@ -1,26 +1,31 @@
-import { AbstractModel } from "next-core-model";
-import http from "http";
-import https from "https";
+const { AbstractModel } = require("next-core-model");
+const http = require("http");
+const https = require("https");
 
 /**
- * Resource class to handle REST from Node</br/>
- * <em>Note: URL property is required</em>
- *
+ * Resource class to handle REST = require(Node</br/>
+ * <em>Note: URI property is required</em>
+ * @param {attributes} attributes Any attributes to prefill the model
+ * @param {object} options Any options to pass
+ * @param {any} ...args Any additional args
  * @extends AbstractModel
  */
 class Resource extends AbstractModel {
   constructor(attributes, options, ...args) {
+    if (!options) {
+      options = {};
+    }
     super(attributes, options, args);
-    this.secure = false;
-    this.id = "";
-    this.url = "";
+    this.datasource = (options.datasource) ? options.datasource : null;
+    this.id = (options.id) ? options.id : "";
+    this.secure = (options.secure) ? options.secure : false;
   };
   /**
   * @property {string} secure The secure flag
   */
 
   /**
-  * @property {string} url The url for the REST Service
+  * @property {string} uri The uri for the REST Service
   */
 
   /**
@@ -29,8 +34,8 @@ class Resource extends AbstractModel {
   */
   initialize(options) {
     //logger.log("initialize");
-    if (options && options.url) {
-      this.url = options.url;
+    if (options && options.uri) {
+      this.uri = options.uri;
     }
     // don't save this as data, but properties via the object base class options copy.
     this.unset("uri");
@@ -56,7 +61,7 @@ class Resource extends AbstractModel {
   */
   sync(method, options) {
     //logger.debug("sync " + method);
-    if (this.url) {
+    if (this.uri) {
       let that = this, success, error;
       if (options && options.success && (typeof options.success === "function")) {
         success = options.success;
@@ -66,7 +71,7 @@ class Resource extends AbstractModel {
       }
 
       try {
-        let j = {}, q, u = (typeof this.url === "function") ? this.url() : this.url;
+        let j = {}, q, u = (typeof this.uri === "function") ? this.uri() : this.uri;
         if (method === "create") {
           j = that.attributes;
           let options = {
@@ -165,7 +170,7 @@ class Resource extends AbstractModel {
 
         } else {
           // read
-          //logger.debug("reading from " + u);
+          //logger.debug("reading = require(" + u);
           //logger.debug("have options? " + (options));
 
           const h = (this.secure) ? https : http;
@@ -218,11 +223,11 @@ class Resource extends AbstractModel {
         }
       }
     } else {
-      //throw new Error("No url");
+      //throw new Error("No uri");
       //logger.warn();
     }
     return {};
   };
 };
 
-export default Resource;
+module.exports = Resource;

@@ -1,10 +1,10 @@
-import ResourceCollection from "./collection/resourceCollection.js";
-import EntityCollection from "./collection/entityCollection.js";
-import PaginatedResourceCollection from "./collection/paginatedResourceCollection.js";
-import PaginationFactory from "./collection/paginationFactory.js";
-import PAGINATION_API from "./collection/paginationAPIType.js";
-import Entity from "./model/entity.js";
-import Resource from "./model/resource.js";
+const ResourceCollection = require("./collection/resourceCollection.js");
+const EntityCollection = require("./collection/entityCollection.js");
+const PaginatedResourceCollection = require("./collection/paginatedResourceCollection.js");
+const PaginationFactory = require("./collection/paginationFactory.js");
+const PAGINATION_API = require("./collection/paginationAPIType.js");
+const Entity = require("./model/entity.js");
+const Resource = require("./model/resource.js");
 
 module.exports.ResourceCollection = ResourceCollection;
 module.exports.EntityCollection = EntityCollection;

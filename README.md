@@ -14,7 +14,6 @@ The Augmented.js Next Service - Entity Models Module.
         -   [Properties](#properties)
     -   [uri](#uri-1)
         -   [Properties](#properties-1)
-    -   [uri](#uri-2)
     -   [url](#url)
     -   [sync](#sync)
         -   [Parameters](#parameters-1)
@@ -28,12 +27,13 @@ The Augmented.js Next Service - Entity Models Module.
         -   [Parameters](#parameters-5)
 -   [EntityCollection](#entitycollection)
     -   [Parameters](#parameters-6)
-    -   [url](#url-1)
+    -   [uri](#uri-2)
         -   [Properties](#properties-2)
-    -   [url](#url-2)
-    -   [url](#url-3)
+    -   [uri](#uri-3)
+    -   [uri](#uri-4)
         -   [Properties](#properties-3)
-    -   [url](#url-4)
+    -   [uri](#uri-5)
+    -   [url](#url-1)
     -   [initialize](#initialize)
         -   [Parameters](#parameters-7)
     -   [init](#init)
@@ -79,19 +79,20 @@ The Augmented.js Next Service - Entity Models Module.
     -   [Parameters](#parameters-23)
     -   [initialize](#initialize-1)
         -   [Parameters](#parameters-24)
+        -   [Properties](#properties-6)
     -   [initialize](#initialize-2)
         -   [Parameters](#parameters-25)
-        -   [Properties](#properties-6)
+        -   [Properties](#properties-7)
     -   [initialize](#initialize-3)
         -   [Parameters](#parameters-26)
-        -   [Properties](#properties-7)
+        -   [Properties](#properties-8)
     -   [initialize](#initialize-4)
         -   [Parameters](#parameters-27)
     -   [init](#init-1)
         -   [Parameters](#parameters-28)
     -   [sync](#sync-2)
         -   [Parameters](#parameters-29)
-        -   [Properties](#properties-8)
+        -   [Properties](#properties-9)
     -   [sync](#sync-3)
         -   [Parameters](#parameters-30)
     -   [fetch](#fetch-3)
@@ -106,10 +107,10 @@ The Augmented.js Next Service - Entity Models Module.
     -   [Parameters](#parameters-35)
     -   [initialize](#initialize-5)
         -   [Parameters](#parameters-36)
-        -   [Properties](#properties-9)
+        -   [Properties](#properties-10)
     -   [initialize](#initialize-6)
         -   [Parameters](#parameters-37)
-        -   [Properties](#properties-10)
+        -   [Properties](#properties-11)
     -   [initialize](#initialize-7)
         -   [Parameters](#parameters-38)
     -   [init](#init-2)
@@ -142,9 +143,7 @@ Collection name for us in a datasource or an identifier
 
 #### Properties
 
--   `url` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The url for the datasource (if applicable)
-
-### uri
+-   `uri` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The uri for the resource
 
 ### url
 
@@ -206,7 +205,7 @@ Collection class to handle ORM to a datasource&lt;/br/>
 -   `models`  
 -   `options`  
 
-### url
+### uri
 
 Collection name for us in a datasource or an identifier
 
@@ -214,19 +213,26 @@ Collection name for us in a datasource or an identifier
 
 -   `name` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The name of the collection
 
-### url
+### uri
 
 The query to use for the query - defaults to "id" selection
 
-### url
+### uri
 
 #### Properties
 
--   `url` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The url for the datasource (if applicable)
+-   `uri` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The uri for the datasource (if applicable)
+
+### uri
+
+Returns **([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function))** uri The URI or a function to retun a URI object
 
 ### url
 
-Returns **([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function))** url The URL or a function to retun a URL object
+**Meta**
+
+-   **deprecated**: This is deprecated.
+
 
 ### initialize
 
@@ -404,15 +410,15 @@ Types of pagination API
 
 ## Entity
 
-**Extends Model**
+**Extends AbstractModel**
 
 Entity class to handle ORM to a datasource&lt;/br/>
 <em>Note: Datasource property is required</em>
 
 ### Parameters
 
--   `attributes`  
--   `options`  
+-   `attributes` **attributes** Any attributes to prefill the model
+-   `options` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Any options to pass
 -   `args` **...any** 
 
 ### initialize
@@ -423,6 +429,10 @@ The query to use for the query - defaults to "id" selection
 
 -   `options`  
 
+#### Properties
+
+-   `query` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** The query string to use for selection
+
 ### initialize
 
 #### Parameters
@@ -431,7 +441,7 @@ The query to use for the query - defaults to "id" selection
 
 #### Properties
 
--   `url` **([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function))** The url for the datasource (if applicable)
+-   `uri` **([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function))** The uri for the datasource (if applicable)
 
 ### initialize
 
@@ -515,13 +525,13 @@ Destroy the entity
 
 **Extends AbstractModel**
 
-Resource class to handle REST from Node&lt;/br/>
-<em>Note: URL property is required</em>
+Resource class to handle REST = require(Node&lt;/br/>
+<em>Note: URI property is required</em>
 
 ### Parameters
 
--   `attributes`  
--   `options`  
+-   `attributes` **attributes** Any attributes to prefill the model
+-   `options` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Any options to pass
 -   `args` **...any** 
 
 ### initialize
@@ -542,7 +552,7 @@ Resource class to handle REST from Node&lt;/br/>
 
 #### Properties
 
--   `url` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The url for the REST Service
+-   `uri` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The uri for the REST Service
 
 ### initialize
 

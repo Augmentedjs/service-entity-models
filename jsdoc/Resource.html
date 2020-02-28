@@ -67,7 +67,6 @@
 									<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Globals<b class="caret"></b></a>
 									<ul class="dropdown-menu">
 											<li><a href="global.html#queryThequerystringtouseforselection">query The query string to use for selection</a></li>
-											<li><a href="global.html#%257Bany%257DqueryThequerystringtouseforselection">{any} query The query string to use for selection</a></li>
 									</ul>
 								</li>
 								<li class="dropdown">
@@ -113,13 +112,48 @@
 					<section>
 							<dl class="symbol primary">
 								<dt class="symbol-title class">
-			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="name">Resource</span><span class="signature-params">()</span></h2>
+			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="name">Resource</span><span class="signature-params">( <span class="signature-param">attributes</span>, <span class="signature-param">options</span>&nbsp;)</span></h2>
 </dt>
 <dd class="symbol-details class" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc"><p>Resource class to handle REST from Node&lt;/br/&gt;<br>
-			<em>Note: URL property is required</em></p></div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc"><p>Resource class to handle REST = require(Node&lt;/br/&gt;<br>
+			<em>Note: URI property is required</em></p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>attributes</code></td>
+							<td><span class="param-type">attributes</span></td>
+							<td class="last">
+									<p>Any attributes to prefill the model</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>options</code></td>
+							<td><span class="param-type">object</span></td>
+							<td class="last">
+									<p>Any options to pass</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>..args</code></td>
+							<td><span class="param-type">any</span></td>
+							<td class="last">
+									<p>Any additional args</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
 			
@@ -146,7 +180,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_resource.js.html">model/resource.js</a>, <a href="model_resource.js.html#line-12">line 12</a></p>
+									<p class="form-control-static"><a href="model_resource.js.html">model/resource.js</a>, <a href="model_resource.js.html#line-14">line 14</a></p>
 								</div>
 							</div>
 			
@@ -208,7 +242,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_resource.js.html">model/resource.js</a>, <a href="model_resource.js.html#line-30">line 30</a></p>
+									<p class="form-control-static"><a href="model_resource.js.html">model/resource.js</a>, <a href="model_resource.js.html#line-35">line 35</a></p>
 								</div>
 							</div>
 			
@@ -266,7 +300,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_resource.js.html">model/resource.js</a>, <a href="model_resource.js.html#line-43">line 43</a></p>
+									<p class="form-control-static"><a href="model_resource.js.html">model/resource.js</a>, <a href="model_resource.js.html#line-48">line 48</a></p>
 								</div>
 							</div>
 			
@@ -324,7 +358,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_resource.js.html">model/resource.js</a>, <a href="model_resource.js.html#line-49">line 49</a></p>
+									<p class="form-control-static"><a href="model_resource.js.html">model/resource.js</a>, <a href="model_resource.js.html#line-54">line 54</a></p>
 								</div>
 							</div>
 			
@@ -389,7 +423,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_resource.js.html">model/resource.js</a>, <a href="model_resource.js.html#line-57">line 57</a></p>
+									<p class="form-control-static"><a href="model_resource.js.html">model/resource.js</a>, <a href="model_resource.js.html#line-62">line 62</a></p>
 								</div>
 							</div>
 			
@@ -410,7 +444,7 @@
 	</div>
 	<footer>
 				<div class="footer-option"><a href='http://www.augmentedjs.com'>Augmented.js Homepage</a></div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Fri Sep 27th 2019 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Feb 27th 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

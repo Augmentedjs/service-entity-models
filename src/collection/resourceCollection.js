@@ -1,6 +1,6 @@
-import { AbstractCollection } from "next-core-model";
-import http from "http";
-import https from "https";
+const { AbstractCollection } = require( "next-core-model");
+const http = require("http");
+const https = require("https");
 
 /**
  * Collection class to handle REST
@@ -8,9 +8,12 @@ import https from "https";
  */
 class ResourceCollection extends AbstractCollection {
   constructor(models, options) {
+    if (!options) {
+      options = {};
+    }
     super(models, options);
-    this.name = "collection";
-    this._url = "";
+    this.name = (options.name) ? options.name : "collection";
+    this._uri = (options.uri) ? options.uri : "";
   };
   /**
   * Collection name for us in a datasource or an identifier
@@ -18,11 +21,7 @@ class ResourceCollection extends AbstractCollection {
   */
 
   /**
-  * @property {string} url The url for the datasource (if applicable)
-  */
-
-  /**
-  * @property uri The uri for the ResourceCollection
+  * @property {string} uri The uri for the resource
   */
 
   get uri() {
@@ -56,7 +55,7 @@ class ResourceCollection extends AbstractCollection {
   */
   sync(method, options) {
     //logger.debug("sync " + method);
-    if (this.url) {
+    if (this.uri) {
       let that = this, success, error;
       if (options && options.success && (typeof options.success === "function")) {
         success = options.success;
@@ -66,7 +65,7 @@ class ResourceCollection extends AbstractCollection {
       }
 
       try {
-        let j = {}, q, u = (typeof this.url === "function") ? this.url() : this.url;
+        let j = {}, q, u = (typeof this.uri === "function") ? this.uri() : this.uri;
         if (method === "create") {
           j = that.attributes;
           let options = {
@@ -165,7 +164,7 @@ class ResourceCollection extends AbstractCollection {
 
         } else {
           // read
-          //logger.debug("reading from " + u);
+          //logger.debug("reading = require( " + u);
           //logger.debug("have options? " + (options));
 
           const h = (this.secure) ? https : http;
@@ -218,7 +217,7 @@ class ResourceCollection extends AbstractCollection {
         }
       }
     } else {
-      //throw new Error("No url");
+      //throw new Error("No uri");
       //logger.warn();
     }
     return {};
@@ -254,4 +253,4 @@ class ResourceCollection extends AbstractCollection {
   };
 };
 
-export default ResourceCollection;
+module.exports = ResourceCollection;

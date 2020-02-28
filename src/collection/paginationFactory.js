@@ -1,4 +1,4 @@
-import PAGINATION_API from "./paginationAPIType.js";
+const PAGINATION_API = require("./paginationAPIType.js");
 
 /**
  * Pagination factory for returning pagination collections of an API type
@@ -46,4 +46,4 @@ class PaginationFactory {
   };
 };
 
-export default PaginationFactory;
+module.exports = PaginationFactory;

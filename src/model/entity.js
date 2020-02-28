@@ -1,27 +1,32 @@
-import { AbstractModel } from "next-core-model";
+const { AbstractModel } = require("next-core-model");
 
 /**
  * Entity class to handle ORM to a datasource</br/>
  * <em>Note: Datasource property is required</em>
- *
- * @extends Model
+ * @param {attributes} attributes Any attributes to prefill the model
+ * @param {object} options Any options to pass
+ * @param {any} ...args Any additional args
+ * @extends AbstractModel
  */
 class Entity extends AbstractModel {
   constructor(attributes, options, ...args) {
+    if (!options) {
+      options = {};
+    }
     super(attributes, options, args);
-    this.id = "";
-    this.url = "";
-    this.query = {};
-    this.collection = "collection";
-    this.datasource = null;
+    this.collection = (options.collection) ? options.collection : "collection";
+    this._uri = (options.uri) ? options.uri : "";
+    this.query = (options.query) ? options.query : null;
+    this.datasource = (options.datasource) ? options.datasource : null;
+    this.id = (options.id) ? options.id : "";
   };
   /**
   * The query to use for the query - defaults to "id" selection
-  * @method {any} query The query string to use for selection
+  * @property {object} query The query string to use for selection
   */
 
   /**
-  * @property {string|function} url The url for the datasource (if applicable)
+  * @property {string|function} uri The uri for the datasource (if applicable)
   */
 
   /**
@@ -40,8 +45,8 @@ class Entity extends AbstractModel {
       if (options.datasource) {
         this.datasource = options.datasource;
       }
-      if (options.url) {
-        this.url = this.datasource.url;
+      if (options.uri) {
+        this.uri = this.datasource.uri;
       }
       if (options.id) {
         this.id = options.id;
@@ -52,7 +57,7 @@ class Entity extends AbstractModel {
     }
     // don't save this as data, but properties via the object base class options copy.
     this.unset("datasource");
-    this.unset("url");
+    this.unset("uri");
     this.unset("query");
     this.unset("collection");
     this.unset("id");
@@ -66,7 +71,6 @@ class Entity extends AbstractModel {
   * @param {object} options Any options to pass
   */
   init(options) {
-
   };
   /**
   * @property {Augmented.Service.DataSource} datasource Datasource instance
@@ -85,7 +89,7 @@ class Entity extends AbstractModel {
         let j = {}, q;
         if (method === "create") {
           j = that.attributes;
-          this.datasource.insert(j, function() {
+          this.datasource.insert(j, () => {
             that.reset(j);
             if (options && options.success && (typeof options.success === "function")) {
               options.success();
@@ -102,7 +106,7 @@ class Entity extends AbstractModel {
             q = this.query;
           }
 
-          this.datasource.update(q, j, function() {
+          this.datasource.update(q, j, () => {
             //that.reset(j);
             if (options && options.success && (typeof options.success === "function")) {
               options.success();
@@ -114,7 +118,7 @@ class Entity extends AbstractModel {
           } else {
             q = this.query;
           }
-          this.datasource.remove(q, function() {
+          this.datasource.remove(q, () => {
             that.reset();
             if (options && options.success && (typeof options.success === "function")) {
               options.success();
@@ -138,7 +142,7 @@ class Entity extends AbstractModel {
           }
 
           //logger.debug("query " + JSON.stringify(myQuery));
-          this.datasource.query(myQuery, function(data) {
+          this.datasource.query(myQuery, (data) => {
             if (data === null) {
               throw new Error("No Data Returned!");
             }
@@ -197,4 +201,4 @@ class Entity extends AbstractModel {
   };
 };
 
-export default Entity;
+module.exports = Entity;

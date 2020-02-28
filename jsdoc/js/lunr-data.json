@@ -99,6 +99,11 @@
           "properti",
           "requir"
         ],
+        "EntityCollection.html#uri": [
+          "entitycollection#uri",
+          "member",
+          "uri"
+        ],
         "EntityCollection.html#url": [
           "entitycollection#url",
           "member",
@@ -429,13 +434,13 @@
         "Resource.html": [
           "class",
           "handl",
-          "node&lt;/br/&gt",
           "note",
           "properti",
           "requir",
+          "require(node&lt;/br/&gt",
           "resourc",
           "rest",
-          "url"
+          "uri"
         ],
         "Resource.html#initialize": [
           "function",
@@ -475,7 +480,7 @@
           "sync"
         ]
       },
-      "length": 54
+      "length": 55
     },
     "tokenStore": {
       "root": {
@@ -909,50 +914,6 @@
                   }
                 }
               }
-            },
-            "d": {
-              "docs": {},
-              "e": {
-                "docs": {},
-                "&": {
-                  "docs": {},
-                  "l": {
-                    "docs": {},
-                    "t": {
-                      "docs": {},
-                      ";": {
-                        "docs": {},
-                        "/": {
-                          "docs": {},
-                          "b": {
-                            "docs": {},
-                            "r": {
-                              "docs": {},
-                              "/": {
-                                "docs": {},
-                                "&": {
-                                  "docs": {},
-                                  "g": {
-                                    "docs": {},
-                                    "t": {
-                                      "docs": {
-                                        "Resource.html": {
-                                          "ref": "Resource.html",
-                                          "tf": 5.555555555555555
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
             }
           },
           "a": {
@@ -1048,6 +1009,62 @@
                       "Resource.html": {
                         "ref": "Resource.html",
                         "tf": 5.555555555555555
+                      }
+                    },
+                    "e": {
+                      "docs": {},
+                      "(": {
+                        "docs": {},
+                        "n": {
+                          "docs": {},
+                          "o": {
+                            "docs": {},
+                            "d": {
+                              "docs": {},
+                              "e": {
+                                "docs": {},
+                                "&": {
+                                  "docs": {},
+                                  "l": {
+                                    "docs": {},
+                                    "t": {
+                                      "docs": {},
+                                      ";": {
+                                        "docs": {},
+                                        "/": {
+                                          "docs": {},
+                                          "b": {
+                                            "docs": {},
+                                            "r": {
+                                              "docs": {},
+                                              "/": {
+                                                "docs": {},
+                                                "&": {
+                                                  "docs": {},
+                                                  "g": {
+                                                    "docs": {},
+                                                    "t": {
+                                                      "docs": {
+                                                        "Resource.html": {
+                                                          "ref": "Resource.html",
+                                                          "tf": 5.555555555555555
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
                       }
                     }
                   }
@@ -2984,6 +3001,10 @@
                         "ref": "PaginationFactory.html#.type",
                         "tf": 110
                       },
+                      "EntityCollection.html#uri": {
+                        "ref": "EntityCollection.html#uri",
+                        "tf": 110
+                      },
                       "EntityCollection.html#url": {
                         "ref": "EntityCollection.html#url",
                         "tf": 110
@@ -3175,6 +3196,14 @@
                                             "docs": {},
                                             "r": {
                                               "docs": {},
+                                              "i": {
+                                                "docs": {
+                                                  "EntityCollection.html#uri": {
+                                                    "ref": "EntityCollection.html#uri",
+                                                    "tf": 1150
+                                                  }
+                                                }
+                                              },
                                               "l": {
                                                 "docs": {
                                                   "EntityCollection.html#url": {
@@ -3777,6 +3806,26 @@
           "docs": {},
           "r": {
             "docs": {},
+            "i": {
+              "docs": {
+                "EntityCollection.html#uri": {
+                  "ref": "EntityCollection.html#uri",
+                  "tf": 750
+                },
+                "PaginatedResourceCollection.html#uri": {
+                  "ref": "PaginatedResourceCollection.html#uri",
+                  "tf": 750
+                },
+                "ResourceCollection.html#uri": {
+                  "ref": "ResourceCollection.html#uri",
+                  "tf": 750
+                },
+                "Resource.html": {
+                  "ref": "Resource.html",
+                  "tf": 5.555555555555555
+                }
+              }
+            },
             "l": {
               "docs": {
                 "EntityCollection.html#url": {
@@ -3789,22 +3838,6 @@
                 },
                 "ResourceCollection.html#url": {
                   "ref": "ResourceCollection.html#url",
-                  "tf": 750
-                },
-                "Resource.html": {
-                  "ref": "Resource.html",
-                  "tf": 5.555555555555555
-                }
-              }
-            },
-            "i": {
-              "docs": {
-                "PaginatedResourceCollection.html#uri": {
-                  "ref": "PaginatedResourceCollection.html#uri",
-                  "tf": 750
-                },
-                "ResourceCollection.html#uri": {
-                  "ref": "ResourceCollection.html#uri",
                   "tf": 750
                 }
               }
@@ -3866,7 +3899,7 @@
           }
         }
       },
-      "length": 327
+      "length": 330
     },
     "corpusTokens": [
       "api",
@@ -3901,6 +3934,7 @@
       "entitycollection#setdatasourcecollect",
       "entitycollection#sync",
       "entitycollection#upd",
+      "entitycollection#uri",
       "entitycollection#url",
       "factori",
       "fetch",
@@ -3930,7 +3964,6 @@
       "need",
       "next",
       "nextpag",
-      "node&lt;/br/&gt",
       "note",
       "number",
       "option",
@@ -3963,6 +3996,7 @@
       "readm",
       "refresh",
       "requir",
+      "require(node&lt;/br/&gt",
       "resourc",
       "resource#fetch",
       "resource#init",
@@ -4075,6 +4109,16 @@
       "summary": "",
       "description": "Collection class to handle ORM to a datasource&lt;/br/&gt; Note: Datasource property is required",
       "body": ""
+    },
+    "EntityCollection.html#uri": {
+      "id": "EntityCollection.html#uri",
+      "kind": "member",
+      "title": "uri",
+      "longname": "EntityCollection#uri",
+      "name": "uri",
+      "tags": "EntityCollection#uri uri",
+      "summary": "",
+      "description": ""
     },
     "EntityCollection.html#url": {
       "id": "EntityCollection.html#url",
@@ -4507,7 +4551,7 @@
       "name": "Resource",
       "tags": "Resource",
       "summary": "",
-      "description": "Resource class to handle REST from Node&lt;/br/&gt; Note: URL property is required",
+      "description": "Resource class to handle REST = require(Node&lt;/br/&gt; Note: URI property is required",
       "body": ""
     },
     "Resource.html#initialize": {

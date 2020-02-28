@@ -1,4 +1,4 @@
-import { AbstractCollection } from "next-core-model";
+const { AbstractCollection } = require("next-core-model");
 
 /**
  * Collection class to handle ORM to a datasource</br/>
@@ -7,10 +7,10 @@ import { AbstractCollection } from "next-core-model";
  */
 class EntityCollection extends AbstractCollection {
   constructor(models, options) {
-    super(models, options);
     if (!options) {
       options = {};
     }
+    super(models, options);
     this.name = (options.name) ? options.name : "collection";
     this._uri = (options.uri) ? options.uri : "";
     this.query = (options.query) ? options.query : null;
@@ -28,20 +28,35 @@ class EntityCollection extends AbstractCollection {
   */
 
   /**
-  * @property {string} url The url for the datasource (if applicable)
+  * @property {string} uri The uri for the datasource (if applicable)
   */
 
   /**
-  * @property url Set the url for the ResourceCollection
-  * @returns {string|function} url The URL or a function to retun a URL object
+  * @property uri Set the uri for the ResourceCollection
+  * @returns {string|function} uri The URI or a function to retun a URI object
   */
-  get url() {
-    return this._url;
+  get uri() {
+    return this._uri;
   };
 
-  set url(url) {
-    this._url = url;
+  set uri(uri) {
+    this._uri = uri;
   };
+
+  /**
+  * @property url The url for the ResourceCollection
+  * @deprecated
+  */
+
+  get url() {
+    console.warn("url is deprecated, use uri instead.");
+    return this._uri;
+  };
+
+  set url(uri) {
+    console.warn("url is deprecated, use uri instead.");
+    this._uri = uri;
+  }; 
 
   /**
   * Initialize the model with needed wireing
@@ -60,12 +75,12 @@ class EntityCollection extends AbstractCollection {
       if (options.name) {
         this.name = options.name;
       }
-      if (options.url) {
-        this.url = options.url;
+      if (options.uri) {
+        this.uri = options.uri;
       }
     }
-    if (this.datasource && (this.url === "")) {
-      this.url =  this.datasource.url;
+    if (this.datasource && (this.uri === "")) {
+      this.uri =  this.datasource.uri;
     }
 
     this.setDataSourceCollection(this.name);
@@ -206,4 +221,4 @@ class EntityCollection extends AbstractCollection {
     }
   };
 
-export default EntityCollection;
+module.exports = EntityCollection;

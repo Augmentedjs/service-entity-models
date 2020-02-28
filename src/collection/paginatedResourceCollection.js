@@ -1,4 +1,4 @@
-import ResourceCollection from "./resourceCollection.js";
+const ResourceCollection = require("./resourceCollection.js");
 
 /**
  * Collection class to handle ORM to a datasource with pagination</br/>
@@ -7,10 +7,10 @@ import ResourceCollection from "./resourceCollection.js";
  */
 class PaginatedResourceCollection extends ResourceCollection {
   constructor(models, options) {
-    super(models, options);
     if (!options) {
       options = {};
     }
+    super(models, options);
     this.paginationConfiguration = {
       currentPageParam: "page",
       pageSizeParam: "per_page"
@@ -115,4 +115,4 @@ class PaginatedResourceCollection extends ResourceCollection {
   };
 };
 
-export default PaginatedResourceCollection;
+module.exports = PaginatedResourceCollection;

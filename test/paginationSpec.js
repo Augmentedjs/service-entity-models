@@ -74,7 +74,7 @@ describe('Given an Augmented Collection needing pagination', () => {
     });
 
     xit('can fetch', () => {
-      c.url = "/tests/1";
+      c.uri = "/tests/1";
       c.mock = true;
       const ret = c.fetch();
       expect(ret).to.be.not.undefined;

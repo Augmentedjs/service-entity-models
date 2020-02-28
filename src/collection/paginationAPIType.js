@@ -11,4 +11,4 @@ PAGINATION_API.GITHUB = Symbol("github");
 PAGINATION_API.SOLR = Symbol("solr");
 PAGINATION_API.DATABASE = Symbol("database");
 
-export default PAGINATION_API;
+module.exports = PAGINATION_API;
