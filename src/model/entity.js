@@ -61,7 +61,7 @@ class Entity extends AbstractModel {
     this.unset("query");
     this.unset("collection");
     this.unset("id");
-    if (this.datasource) {
+    if (this.datasource && this.collection) {
       this.datasource.setCollection(this.collection);
     }
     this.init(options);
@@ -84,7 +84,7 @@ class Entity extends AbstractModel {
   sync(method, options) {
     //logger.debug("sync " + method);
     if (this.datasource) {
-      let that = this;
+      const that = this;
       try {
         let j = {}, q;
         if (method === "create") {
@@ -141,7 +141,7 @@ class Entity extends AbstractModel {
             myQuery = x;
           }
 
-          //logger.debug("query " + JSON.stringify(myQuery));
+          console.debug("query " + JSON.stringify(myQuery));
           this.datasource.query(myQuery, (data) => {
             if (data === null) {
               throw new Error("No Data Returned!");
