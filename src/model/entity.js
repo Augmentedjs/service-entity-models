@@ -9,10 +9,7 @@ const { AbstractModel } = require("next-core-model");
  * @extends AbstractModel
  */
 class Entity extends AbstractModel {
-  constructor(attributes, options, ...args) {
-    if (!options) {
-      options = {};
-    }
+  constructor(attributes, options = {}, ...args) {
     super(attributes, options, args);
     this.collection = (options.collection) ? options.collection : "collection";
     this._uri = (options.uri) ? options.uri : "";

@@ -224,13 +224,6 @@
           "set",
           "setcurrentpag"
         ],
-        "PaginatedResourceCollection.html#fetch": [
-          "entiti",
-          "fetch",
-          "function",
-          "option",
-          "paginatedresourcecollection#fetch"
-        ],
         "PaginatedResourceCollection.html#sync": [
           "function",
           "handl",
@@ -240,6 +233,13 @@
           "paginatedresourcecollection#sync",
           "rest",
           "sync"
+        ],
+        "PaginatedResourceCollection.html#fetch": [
+          "entiti",
+          "fetch",
+          "function",
+          "option",
+          "paginatedresourcecollection#fetch"
         ],
         "PaginatedResourceCollection.html#nextPage": [
           "function",
@@ -2022,13 +2022,13 @@
                             "ref": "PaginatedResourceCollection.html#setCurrentPage",
                             "tf": 110
                           },
-                          "PaginatedResourceCollection.html#fetch": {
-                            "ref": "PaginatedResourceCollection.html#fetch",
-                            "tf": 110
-                          },
                           "PaginatedResourceCollection.html#sync": {
                             "ref": "PaginatedResourceCollection.html#sync",
                             "tf": 118.33333333333333
+                          },
+                          "PaginatedResourceCollection.html#fetch": {
+                            "ref": "PaginatedResourceCollection.html#fetch",
+                            "tf": 110
                           },
                           "PaginatedResourceCollection.html#nextPage": {
                             "ref": "PaginatedResourceCollection.html#nextPage",
@@ -3654,13 +3654,13 @@
                         "ref": "EntityCollection.html#destroy",
                         "tf": 50
                       },
-                      "PaginatedResourceCollection.html#fetch": {
-                        "ref": "PaginatedResourceCollection.html#fetch",
-                        "tf": 50
-                      },
                       "PaginatedResourceCollection.html#sync": {
                         "ref": "PaginatedResourceCollection.html#sync",
                         "tf": 33.33333333333333
+                      },
+                      "PaginatedResourceCollection.html#fetch": {
+                        "ref": "PaginatedResourceCollection.html#fetch",
+                        "tf": 50
                       },
                       "PaginatedResourceCollection.html#save": {
                         "ref": "PaginatedResourceCollection.html#save",
@@ -4213,16 +4213,6 @@
       "summary": "",
       "description": "Sets the current page"
     },
-    "PaginatedResourceCollection.html#fetch": {
-      "id": "PaginatedResourceCollection.html#fetch",
-      "kind": "function",
-      "title": "fetch( options )",
-      "longname": "PaginatedResourceCollection#fetch",
-      "name": "fetch",
-      "tags": "PaginatedResourceCollection#fetch fetch",
-      "summary": "",
-      "description": "Fetch the entity"
-    },
     "PaginatedResourceCollection.html#sync": {
       "id": "PaginatedResourceCollection.html#sync",
       "kind": "function",
@@ -4232,6 +4222,16 @@
       "tags": "PaginatedResourceCollection#sync sync",
       "summary": "",
       "description": "Sync method to handle REST functions for the model"
+    },
+    "PaginatedResourceCollection.html#fetch": {
+      "id": "PaginatedResourceCollection.html#fetch",
+      "kind": "function",
+      "title": "fetch( options )",
+      "longname": "PaginatedResourceCollection#fetch",
+      "name": "fetch",
+      "tags": "PaginatedResourceCollection#fetch fetch",
+      "summary": "",
+      "description": "Fetch the entity"
     },
     "PaginatedResourceCollection.html#nextPage": {
       "id": "PaginatedResourceCollection.html#nextPage",

@@ -11,10 +11,7 @@ const https = require("https");
  * @extends AbstractModel
  */
 class Resource extends AbstractModel {
-  constructor(attributes, options, ...args) {
-    if (!options) {
-      options = {};
-    }
+  constructor(attributes, options = {}, ...args) {
     super(attributes, options, args);
     this.datasource = (options.datasource) ? options.datasource : null;
     this.id = (options.id) ? options.id : "";

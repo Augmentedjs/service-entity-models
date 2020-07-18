@@ -129,7 +129,7 @@ Collection class to handle REST
 ### Parameters
 
 -   `models`  
--   `options`  
+-   `options`   (optional, default `{}`)
 
 ### uri
 
@@ -418,7 +418,7 @@ Entity class to handle ORM to a datasource&lt;/br/>
 ### Parameters
 
 -   `attributes` **attributes** Any attributes to prefill the model
--   `options` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Any options to pass
+-   `options` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Any options to pass (optional, default `{}`)
 -   `args` **...any** 
 
 ### initialize
@@ -531,7 +531,7 @@ Resource class to handle REST <br/>
 ### Parameters
 
 -   `attributes` **attributes** Any attributes to prefill the model
--   `options` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Any options to pass
+-   `options` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Any options to pass (optional, default `{}`)
 -   `args` **...any** 
 
 ### initialize

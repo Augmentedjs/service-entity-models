@@ -7,10 +7,7 @@ const https = require("https");
  * @extends AbstractCollection
  */
 class ResourceCollection extends AbstractCollection {
-  constructor(models, options) {
-    if (!options) {
-      options = {};
-    }
+  constructor(models, options = {}) {
     super(models, options);
     this.name = (options.name) ? options.name : "collection";
     this._uri = (options.uri) ? options.uri : "";
